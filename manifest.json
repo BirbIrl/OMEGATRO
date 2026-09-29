@@ -1,0 +1,10 @@
+{
+    "name": "OMEGATRO",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/OmegaYT3/OMEGATRO",
+    "description": "mod that adds whatever i felt like adding, ft: a bunch of inside jokes, unbalanced stuff, meta jokers, spaghetti code (less in more recent additions)",
+    "dependencies": [
+    "Steamodded-Steamodded-26.829.0",
+    "just_frostice482-Amulet-3.6.1"
+  ]
+}
