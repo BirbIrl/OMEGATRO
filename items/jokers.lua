@@ -1303,19 +1303,19 @@ set_ability = function(self, card, initial, delay_sprites)
         if handle then
             local output = handle:read("*a")
             handle:close()
-            bytes = output:match("%d+\n$")
+            bytes = tonumber(output:match("%d+\n$"))
         end
     elseif os == "Windows" then
         local handle = io.popen('powershell -NoProfile -Command "(Get-PSDrive C).Free" 2>nul')
         if handle then
             local output = handle:read("*a")
             handle:close()
-            bytes = output:match("(%d+)")
+            bytes = tonumber(output:match("(%d+)"))
         end
     end
 
     if bytes then
-        free_gb = tonumber(bytes) / (1024^3)
+        free_gb = bytes / (1024^3)
     end
 
     card.ability.extra.mult = math.floor(free_gb) / 10
